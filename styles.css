@@ -1,0 +1,60 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px; /* Defining a base for REM units */
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    min-height: 100vh; /* For the background to fill the screen */
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+
+
+header nav {
+    display: flex;
+
+    justify-content: center; /* Aligns the flags to the center */
+    gap: 15px; /* Space between the two flags */
+    margin-bottom: 50px;
+}
+
+header button {
+    background: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+header button:hover {
+    transform: scale(1.1); /* A simple zoom effect on hover */
+    
+}
+
+main {
+    /*  Layout and spacing: I use REM */
+    padding: 2.5rem; 
+    margin: 2rem auto;
+    max-width: 50rem; /* Aproximadamente 800px, mas escala com a fonte */
+
+    /* For aesthetic polishment I use px */
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}

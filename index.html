@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raph Homepage</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+    <nav>
+        <h2>Select Language</h2>
+        <!-- Language Toggle Buttons -->
+ <!-- Botão para mudar para Português -->
+<button id="btn-pt" 
+        class="translatable-label" 
+        title="Change to Portuguese"
+        data-en="Change to Portuguese" 
+        data-pt="Mudar para Português"
+        aria-label="Change to Portuguese">
+   <img src="assets/br.webp" 
+        width="40" height="21" 
+        class="translatable-alt"
+        alt="Brazilian Flag" 
+        data-en="Brazilian Flag" 
+        data-pt="Bandeira do Brasil">
+</button>
+
+<!-- Botão para mudar para Inglês -->
+<button id="btn-en" 
+        class="translatable-label" 
+        title="Change to English"
+        data-en="Change to English" 
+        data-pt="Mudar para Inglês"
+        aria-label="Change to English">
+   <img src="assets/us.webp" 
+        width="40" height="21" 
+        class="translatable-alt"
+        alt="American Flag" 
+        data-en="American Flag" 
+        data-pt="Bandeira dos Estados Unidos">
+</button>
+
+    </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+          <img src="placeholder-photo.jpg" 
+     id="profile-image"
+     class="translatable-alt"
+     alt="Professional picture of Raphael" 
+     data-pt="Foto profissional do Raphael" 
+     data-en="Professional picture of Raphael"/>
+
+
+            <div id="content">
+                <h1 class="translatable" data-pt="Oi, eu sou Raphael" data-en="Hi, I am Raphael">Hi, I am Raphael</h1>
+                <p class="translatable" data-pt="Desenvolvedor focado em construir interfaces web funcionais e acessíveis, utilizando HTML, CSS e JavaScript puro.
+" data-en="Developer focused on building functional and accessible web interfaces using vanilla HTML, CSS, and JavaScript." aria-live="polite">Developer focused on building functional and accessible web interfaces using vanilla HTML, CSS, and JavaScript.</p>
+            
+            <p class="translatable" data-pt="Acredito que a tecnologia deve ser para todos. Por isso, foco meus estudos em acessibilidade (WCAG) e na performance do código. "
+            data-en="I believe technology should be for everyone. That's why I focus my studies on web accessibility (WCAG) and code performance.
+">I believe technology should be for everyone. That's why I focus my studies on web accessibility (WCAG) and code performance.
+</p>
+
+<p class="translatable" data-en="Currently, I'm improving my skills in CSS architecture and modern programming logic."
+data-pt="Atualmente, estou aprimorando minhas habilidades em arquitetura de CSS e lógica de programação moderna.">Currently, I'm improving my skills in CSS architecture and modern programming logic.</p>
+</div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
