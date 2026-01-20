@@ -1,6 +1,6 @@
 html {
     box-sizing: border-box;
-    font-size: 16px; /* Defining a base for REM units */
+    font-size: 16px;
 }
 
 *, *:before, *:after {
@@ -10,29 +10,44 @@ html {
     border: 0;
 }
 
+/* 1. CONFIGURAÇÃO DE CORES (Movido para o topo e corrigido) */
+:root {
+    --bg-color: #f4f4f4;
+    --card-bg: #ffffff;      /* Cor do card no modo claro */
+    --text-color: #333;
+    --border-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+    --bg-color: #121212;     /* Fundo bem escuro */
+    --card-bg: #1e1e1e;      /* Card levemente mais claro que o fundo */
+    --text-color: #f4f4f4;
+    --border-color: rgba(255, 255, 255, 0.1);
+}
+
 body {
-    min-height: 100vh; /* For the background to fill the screen */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    
-    
-}
-
-body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
     padding: 20px;
+    /* 2. APLICAÇÃO DAS VARIÁVEIS NO BODY */
+    background-color: var(--bg-color); 
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s; 
 }
 
-
+/* Ajuste no botão de tema para não sumir no escuro */
+#theme-toggle {
+    font-size: 1.2rem;
+    padding: 5px;
+}
 
 header nav {
     display: flex;
-
-    justify-content: center; /* Aligns the flags to the center */
-    gap: 15px; /* Space between the two flags */
+    justify-content: center;
+    gap: 15px;
     margin-bottom: 50px;
 }
 
@@ -43,19 +58,17 @@ header button {
 }
 
 header button:hover {
-    transform: scale(1.1); /* A simple zoom effect on hover */
-    
+    transform: scale(1.1);
 }
 
 main {
-    /*  Layout and spacing: I use REM */
     padding: 2.5rem; 
     margin: 2rem auto;
-    max-width: 50rem; /* Aproximadamente 800px, mas escala com a fonte */
-
-    /* For aesthetic polishment I use px */
+    max-width: 50rem; 
     border-radius: 20px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    /* 3. APLICAÇÃO DAS VARIÁVEIS NO CARD */
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
@@ -68,19 +81,17 @@ main {
 
 .social-links a {
     text-decoration: none;
-    /* Usa a mesma cor que você definiu para o texto do seu body (#333) */
-    color: #333; 
     font-weight: 600;
     padding: 0.5rem 1rem;
-    /* Uma borda sutil para parecer um botão */
-    border: 1px solid #333; 
     border-radius: 8px;
     transition: all 0.3s ease;
+    /* 4. LINKS SOCIAIS DINÂMICOS */
+    color: var(--text-color); 
+    border: 1px solid var(--text-color); 
 }
 
 .social-links a:hover {
-    /* Quando passa o mouse, ele inverte: fundo escuro e letra clara */
-    background-color: #333;
-    color: #f4f4f4; 
+    /* Inversão de cores no hover usando as variáveis */
+    background-color: var(--text-color);
+    color: var(--bg-color); 
 }
-
