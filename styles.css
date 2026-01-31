@@ -95,3 +95,7 @@ main {
     background-color: var(--text-color);
     color: var(--bg-color); 
 }
+
+#project-one-image{
+    border-radius: 15px;
+}
