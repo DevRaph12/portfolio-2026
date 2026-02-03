@@ -76,3 +76,29 @@ btnTheme.addEventListener("click", () => {
     btnTheme.setAttribute('aria-label', label);
     btnTheme.title = label;
 });
+
+
+const emailBtn = document.getElementById('email-link');
+
+if (emailBtn) {
+    emailBtn.addEventListener('click', function(e) {
+        const email = "raphael.almeida.work@gmail.com";
+        const status = document.getElementById('copy-status');
+        
+        // Pega o idioma direto da tag <html lang="..."> que seu script já altera
+        const currentLang = document.documentElement.lang; 
+
+        navigator.clipboard.writeText(email).then(() => {
+            if (status) {
+                // Se o idioma começar com "pt", ele entende que é Português
+                status.textContent = (currentLang.startsWith("pt")) ? " (Copiado!)" : " (Copied!)";
+                
+                status.style.color = "#2ecc71"; 
+                
+                setTimeout(() => { 
+                    status.textContent = ""; 
+                }, 2000);
+            }
+        });
+    });
+}
