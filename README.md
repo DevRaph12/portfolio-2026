@@ -1,9 +1,6 @@
 # 🌐 Raphael Almeida | Front-end Portfolio
 
-[![GitHub Pages](https://img.shields.io)](https://devraph12.github.io)
-[![Status](https://img.shields.io)](https://devraph12.github.io)
-
-This is my personal portfolio, built to showcase my transition from **Vanilla JavaScript** to the **React** ecosystem. It focuses on clean code, web accessibility (WCAG), and a seamless user experience.
+This is my personal portfolio, built to showcase my core strengths in Vanilla JavaScript and Web Accessibility (WCAG) as I prepare for a transition into the React ecosystem.
 
 ## 🚀 Key Features
 
@@ -21,9 +18,11 @@ This is my personal portfolio, built to showcase my transition from **Vanilla Ja
 ## 📦 Deployment & Local Setup
 
 ### Live Demo
-The project is hosted via **GitHub Pages**. Access it here: [devraph12.github.io](https://devraph12.github.io/portfolio-2026/)
+The project is hosted via **GitHub Pages**. Access it here: [https://devraph12.github.io/portfolio-2026/](https://devraph12.github.io/portfolio-2026/)
 
-### Local Development
-1. Clone the repository:
+### 🛠️ Local Development
+To run this project on your machine:
+
+1. **Clone the repository**:
    ```bash
-   git clone https://github.com
+   git clone https://github.com/DevRaph12/portfolio-2026
