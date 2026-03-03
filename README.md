@@ -25,4 +25,5 @@ To run this project on your machine:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/DevRaph12/portfolio-2026
+   git clone https://github.com/DevRaph12/portfolio-2026.git
+   ```
