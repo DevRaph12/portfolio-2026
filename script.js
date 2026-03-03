@@ -51,12 +51,12 @@ btnTheme.title = btnThemeLabelEn;
 
 // Event listener for the Theme Toggle button
 
-// Dentro do Event listener do Theme Toggle:
+
 btnTheme.addEventListener("click", () => {
     const currentTheme = document.documentElement.getAttribute("data-theme");
     const themeIcon = document.getElementById('theme-icon'); // Seleciona o span interno
     
-    // Descobre o idioma atual para traduzir o label do tema na hora
+    // Checks the current language of the document to update the aria-label and title accordingly
     const currentLang = document.documentElement.lang.startsWith('pt') ? 'pt' : 'en';
 
     if (currentTheme === "dark") {
@@ -67,7 +67,7 @@ btnTheme.addEventListener("click", () => {
         themeIcon.textContent = '☀️';
     }
 
-    // Atualiza o ARIA-LABEL e TITLE do botão de tema logo após a troca
+    // Updates the aria-label and title of the button based on the new theme and current language
     const newTheme = document.documentElement.getAttribute("data-theme");
     const label = newTheme === "dark" 
         ? (currentLang === 'pt' ? "Mudar para Modo Claro" : "Switch to Light Mode")
@@ -85,12 +85,12 @@ if (emailBtn) {
         const email = "raphael.almeida.work@gmail.com";
         const status = document.getElementById('copy-status');
         
-        // Pega o idioma direto da tag <html lang="..."> que seu script já altera
+        // Takes the current language of the document to show the correct message
         const currentLang = document.documentElement.lang; 
 
         navigator.clipboard.writeText(email).then(() => {
             if (status) {
-                // Se o idioma começar com "pt", ele entende que é Português
+                // If Language is Portuguese, show "Copiado!", otherwise show "Copied!"
                 status.textContent = (currentLang.startsWith("pt")) ? " (Copiado!)" : " (Copied!)";
                 
                 status.style.color = "#2ecc71"; 
